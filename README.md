@@ -3,8 +3,8 @@ Test Web Deploy
 ```
 $ git clone https://github.com/kin3303/webDeploy.git
 $ cd webDeploy
-$ docker build -t kin3303/webDeploy:latest .
-$ docker push kin3303/webDeploy:latest
+$ docker build -t kin3303/web-deploy:latest .
+$ docker push kin3303/web-deploy:latest
 ```
 
 
