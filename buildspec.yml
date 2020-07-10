@@ -6,8 +6,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=575177389640.dkr.ecr.ap-northeast-2.amazonaws.com/web-deploy
-      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - REPOSITORY_URI="575177389640.dkr.ecr.ap-northeast-2.amazonaws.com/web-deploy"
+      - IMAGE_TAG="$(date +%Y%m%d)-$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)"
   build:
     commands:
       - echo Build started on `date`
